@@ -1,0 +1,553 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NOU XIVARRI - Gastronomía Vasca</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#fffbff",
+                    "surface-bright": "#fbf9f1",
+                    "on-background": "#1b1c17",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#fffbff",
+                    "primary-fixed": "#ffdbd1",
+                    "primary": "#a33818",
+                    "on-secondary-fixed": "#251a00",
+                    "tertiary": "#605b55",
+                    "secondary": "#785a00",
+                    "terracotta-rich": "#CC5533",
+                    "surface-container-highest": "#e4e3db",
+                    "on-primary-fixed-variant": "#862303",
+                    "secondary-container": "#fdc425",
+                    "tertiary-fixed-dim": "#ccc5be",
+                    "surface-container-low": "#f5f4ec",
+                    "on-tertiary-fixed": "#1e1b16",
+                    "surface-tint": "#a63a1a",
+                    "surface-dim": "#dcdad2",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#5a4300",
+                    "on-primary-fixed": "#3b0900",
+                    "background": "#fbf9f1",
+                    "primary-container": "#c44f2e",
+                    "outline": "#8b716a",
+                    "inverse-surface": "#30312c",
+                    "surface-variant": "#e4e3db",
+                    "on-tertiary": "#ffffff",
+                    "deep-earth": "#433422",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c17",
+                    "outline-variant": "#dfc0b8",
+                    "mustard-logo": "#EAB308",
+                    "on-secondary-container": "#6d5200",
+                    "surface-container": "#f0eee6",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#e9e1d9",
+                    "inverse-on-surface": "#f3f1e9",
+                    "on-surface-variant": "#58423c",
+                    "secondary-fixed-dim": "#f7be1d",
+                    "on-tertiary-fixed-variant": "#4a4640",
+                    "surface": "#fbf9f1",
+                    "soft-clay": "#D6CFC7",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "secondary-fixed": "#ffdf9a",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb5a0",
+                    "cream-parchment": "#FFFDF5",
+                    "surface-container-high": "#eae8e0",
+                    "tertiary-container": "#79746d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "32px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "stack-lg": "80px",
+                    "margin-desktop": "64px",
+                    "stack-sm": "16px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": [
+                            "EB Garamond"
+                    ],
+                    "headline-sm": [
+                            "EB Garamond"
+                    ],
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "EB Garamond"
+                    ],
+                    "display-lg": [
+                            "EB Garamond"
+                    ],
+                    "label-caps": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+/* NAVBAR RESPONSIVE */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  background-color: #FFFDF5 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1rem !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex !important;
+  gap: 2rem !important;
+  align-items: center !important;
+}
+
+nav li {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Alinear todos los items igual */
+nav li > a,
+nav li > button {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  white-space: nowrap !important;
+}
+
+/* Dropdown MUCHO MAS A LA IZQUIERDA - BIEN VISIBLE */
+nav div[class*="absolute"] {
+  position: absolute !important;
+  top: 100% !important;
+  left: -180px !important;
+  width: 420px !important;
+  background: #FFFDF5 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+  z-index: 10000 !important;
+  border: 1px solid #E5DDD0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-10px) !important;
+  transition: all 0.3s ease !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  padding: 0.75rem !important;
+  margin-top: 0.5rem !important;
+}
+
+nav .group:hover > div {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Links dropdown */
+nav div a {
+  display: block !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.95rem !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+/* Contenido debajo */
+body {
+  padding-top: 70px !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;
+}
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+  background-color: #FFFDF5 !important;
+  border-bottom: 1px solid #E5DDD0 !important;
+}
+
+#mobile-menu ul {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px !important;
+  }
+  
+  nav ul {
+    gap: 1rem !important;
+  }
+  
+  nav div[class*="absolute"] {
+    width: 100vw !important;
+    left: -1rem !important;
+    position: fixed !important;
+    top: 70px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px !important;
+  }
+}
+</style>
+<style>
+/* CENTRAR PÁGINA */
+* {
+  max-width: 100%;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main, section {
+  width: 100%;
+  overflow-x: hidden;
+}
+</style>
+</head>
+<body class="bg-cream-parchment text-on-surface antialiased overflow-x-hidden selection:bg-terracotta-rich selection:text-white">
+<!-- Navigation (Shared Component) -->
+<nav class="fixed top-0 left-0 right-0 w-full z-9999 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-cream-parchment shadow-sm" id="navbar">
+<div class="flex items-center gap-4">
+<a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="#">NOU XIVARRI</a>
+</div>
+
+<!-- Desktop Menu -->
+<ul class="hidden md:flex gap-8 items-center">
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="index.html">Inicio</a></li>
+<li class="relative group">
+<button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors">
+    Carta
+    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-80 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-9999 overflow-hidden">
+<div class="py-2">
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="carta.html#frankfurt">Frankfurt y bocadillos</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="carta.html#hamburguesas">Hamburguesas y suplementos</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="carta.html#tapas">Tapas</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="carta.html#ensaladas">Ensaladas y postres</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="carta.html#cervezas">Cervezas</a>
+</div>
+</div>
+</li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="galeria.html">Galería</a></li>
+</ul>
+
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<div class="fixed top-20 left-0 right-0 bg-cream-parchment shadow-lg z-9998 hidden" id="mobile-menu">
+<ul class="flex flex-col p-4 gap-2">
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors rounded" href="index.html">Inicio</a></li>
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors rounded" href="carta.html">Carta Completa</a></li>
+<li class="border-t border-outline-variant/20 mt-2 pt-2">
+  <a class="block py-2 px-4 text-sm text-on-surface-variant hover:text-terracotta-rich" href="carta.html#frankfurt">  - Frankfurt y bocadillos</a>
+  <a class="block py-2 px-4 text-sm text-on-surface-variant hover:text-terracotta-rich" href="carta.html#hamburguesas">  - Hamburguesas</a>
+  <a class="block py-2 px-4 text-sm text-on-surface-variant hover:text-terracotta-rich" href="carta.html#tapas">  - Tapas</a>
+  <a class="block py-2 px-4 text-sm text-on-surface-variant hover:text-terracotta-rich" href="carta.html#ensaladas">  - Ensaladas y postres</a>
+  <a class="block py-2 px-4 text-sm text-on-surface-variant hover:text-terracotta-rich" href="carta.html#cervezas">  - Cervezas</a>
+</li>
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors rounded" href="galeria.html">Galería</a></li>
+</ul>
+</div>
+
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+});
+</script>
+
+
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-40" data-alt="A bright, sun-drenched interior of a high-end Mediterranean gastro-bar. Soft golden hour light streams through large windows, illuminating natural wood tables, terracotta accents, and fresh culinary ingredients. The scene is warm, inviting, and captures the vibrant energy of Basque cuisine in a light-mode aesthetic." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAAPwYU7o9-ZuxikHd1aez6CFiScbuWQaJTIrXb-lxQA-K1FNez7E9Wf36W5D682mWExz8mwXErKvzE4o-WeGvbly0ecmSIEFLas1YfdWvqCbSKJ9BWSh7AtTN1B-4shsRkj1uQym1yb1deMVudl-Vw8zltiVNhDsfcXrxQfo8LCx6qTorHKHQA8FloBgbMGh0CzYYo1aa1IJX2gmLqR4LHPnCZqfhbMhfVQTY1rxq3sDuXWI2rbwtu1VEPc0wfudtDFI8&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-cream-parchment via-cream-parchment/60 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
+<img alt="Nou Xivarri Logo" class="w-32 md:w-48 mb-8 drop-shadow-md animate-fade-in-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTG0A03v5f7pmEm00SsSo0yFKEv6mEddeY6clZNhXybXPsO57WT-Gpt9PKV5FrxaQY8dEviwt3U3w38grEA4LkXURNPutMVCTEJKN9Enh2td-7VdRXR3tj0GNs6NSMelWJbdnqsChnCFstrPsph0iQ2b-RqzG1XEsXjbmUJQRJYtxdqFExOBum8oZwUyNtBUUoH0h--0DlHAVhRu6t64eXyr8AOY29V2OGMgqRWquS_GCMXYrTu-XPHScBI3r3S0IB858">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-deep-earth mb-6 text-5xl md:text-7xl">Nou Xivarri Cerveseria&nbsp;</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl text-xl"></p><div class="">Comida rápida con calidad. Frankfurts, hamburguesas, bocadillos&nbsp;</div><div class="">especiales y cerveza fría en Cambrils.</div><p></p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="carta.html" class="inline-block bg-terracotta-rich text-white px-8 py-4 rounded-full font-label-caps text-label-caps shadow-lg shadow-terracotta-rich/20 hover:bg-primary-container transition-all hover:scale-105 mt-8">Descrubre la carta</a>
+</div>
+</div>
+</section>
+<!-- The Essence Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="essence">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1 relative">
+<div class="bg-cover bg-center w-full h-96 rounded-2xl shadow-lg shadow-deep-earth/5" data-alt="Close up of artisanal Basque pinxtos on a rustic wooden board, illuminated by bright, warm natural sunlight. Vibrant colors of fresh tomatoes, peppers, and cured meats pop against a light, creamy parchment-colored background. High-key lighting, capturing a tactile, appetizing Mediterranean aesthetic." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAYVAtcOJU1eFPsFNaOE3zGxlfpMEEuR6Zw069J5MU9cBg9O7VkQqdtj_S1HWv99Jo-8K_HXuJkpJucsFTy35j5FGKYoLbmYWJAYpLsLdmn-waP0dIMj68Mbtf6qmd8LACNFye07YTbhC_nHn3qMz-uqUQF3oDFKE2pPxS5xD_alB_JYP9s8LQcugdhgkUCod0iqsFvMzeCG2_bcn9Lep_JmB8FOyV92VPPw0caGe6-wg_cPCKdLVWY7fRT6wNyk4a2QlovoZwY4-7-JnA&quot;);"></div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-soft-clay/30 rounded-full -z-10 blur-2xl"></div>
+</div>
+<div class="order-1 md:order-2 space-y-6 md:pl-12">
+<span class="inline-block bg-mustard-logo text-deep-earth px-3 py-1 rounded font-label-caps text-label-caps">Nuestra Filosofía</span>
+<h2 class="font-headline-md text-headline-md text-deep-earth text-4xl">La Esencia de Nou Xivarri</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-xl">En Xivarri creemos que la buena comida no tiene que ser complicada. Frankfurts gourmet, hamburguesas de calidad y bocadillos especiales, todo con ese toque que te hace querer volver. Un lugar pequeño pero con mucho corazón, donde cada detalle importa y el servicio es lo primero. Ven a disfrutar de cerveza artesanal, tapas sabrosas y un ambiente relajado en el corazón de Cambrils.</p>
+</div>
+</div>
+</section>
+<!-- Practical Info Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-cream-parchment" id="horario">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-deep-earth mb-4 text-4xl">Horario de Apertura</h2>
+</div>
+<div class="max-w-2xl mx-auto bg-surface-container-low p-8 rounded-2xl text-center shadow-sm border border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-mustard-logo mb-4">schedule</span>
+<p class="font-headline-sm text-headline-sm text-deep-earth mb-2">Abierto todos los días</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant text-xl">12:00 - 23:30</p>
+</div>
+</div>
+</section>
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="contacto">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-deep-earth mb-4 text-4xl">Ubicación</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+<div class="space-y-6">
+<div class="bg-surface-container-low p-8 rounded-2xl text-center md:text-left shadow-sm hover:shadow-md transition-shadow border border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-mustard-logo mb-4">location_on</span>
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 text-3xl">Ubicación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-xl">Carrer de Mossèn Joan Batalla, 4<br class="">43850 Cambrils, Tarragona</p>
+<a class="inline-flex items-center text-terracotta-rich font-label-caps text-label-caps hover:text-primary-container transition-colors group" href="#">
+            Cómo llegar
+            <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl text-center md:text-left shadow-sm hover:shadow-md transition-shadow border border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-mustard-logo mb-4">call</span>
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 text-3xl">Teléfono</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-xl" data-stitch-orig-opacity="0">977 21 73 33</p>
+</div>
+</div>
+<div class="h-full min-h-[400px] md:min-h-full rounded-2xl overflow-hidden shadow-sm border border-outline-variant/20 relative">
+<iframe allowfullscreen="" class="w-full h-full transition-all duration-500" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.843210123456!2d1.0585!3d41.0665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a1597777777777%3A0x7777777777777777!2sCarrer%20de%20Moss%C3%A8n%20Joan%20Batalla%2C%204%2C%2043850%20Cambrils%2C%20Tarragona!5e0!3m2!1sen!2ses!4v1715850000000" style="border: 0px;"></iframe>
+</div>
+</div>
+</div>
+</section><section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-cream-parchment" id="resenas">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-deep-earth mb-4 text-4xl">Lo que dicen nuestros clientes</h2>
+</div>
+<div class="relative">
+<div class="flex overflow-x-auto gap-6 pb-8 scroll-smooth no-scrollbar">
+<!-- Review Card 1 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Los mejores pintxos de Cambrils. El ambiente es inmejorable y el trato exquisito."</p>
+<p class="font-label-caps text-deep-earth">Jordi M.</p>
+</div>
+<!-- Review Card 2 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Ambiente acogedor y trato excelente. Las hamburguesas gourmet son de otro nivel."</p>
+<p class="font-label-caps text-deep-earth">Elena R.</p>
+</div>
+<!-- Review Card 3 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Un rincón con mucho encanto. La cerveza artesanal marida perfecto con sus tapas."</p>
+<p class="font-label-caps text-deep-earth">Marc S.</p>
+</div>
+<!-- Review Card 4 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Calidad excepcional en cada bocado. Se nota el cariño que le ponen a la cocina."</p>
+<p class="font-label-caps text-deep-earth">Laura G.</p>
+</div>
+<!-- Review Card 5 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"El mejor sitio para tapear en el puerto. El servicio es rápido y muy amable."</p>
+<p class="font-label-caps text-deep-earth">Antonio P.</p>
+</div>
+<!-- Review Card 6 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Bocadillos especiales que sorprenden. Volveremos sin duda."</p>
+<p class="font-label-caps text-deep-earth">Carla F.</p>
+</div>
+<!-- Review Card 7 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Auténtico sabor vasco en el Mediterráneo. Los pintxos son una obra de arte."</p>
+<p class="font-label-caps text-deep-earth">Iñaki L.</p>
+</div>
+<!-- Review Card 8 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Un lugar pequeño pero con mucho corazón. Muy recomendable para cenar tranquilo."</p>
+<p class="font-label-caps text-deep-earth">Marta V.</p>
+</div>
+<!-- Review Card 9 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Excelente relación calidad-precio. Las tapas son generosas y muy sabrosas."</p>
+<p class="font-label-caps text-deep-earth">Sergio T.</p>
+</div>
+<!-- Review Card 10 -->
+<div class="flex-none w-80 bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+<div class="flex mb-3"><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span><span class="material-symbols-outlined" style="color: rgb(235, 173, 29); font-variation-settings: &quot;FILL&quot; 1;">star</span></div>
+<p class="font-body-md text-on-surface-variant mb-4 italic">"Siempre que venimos a Cambrils paramos aquí. Nunca defrauda."</p>
+<p class="font-label-caps text-deep-earth">Lucía B.</p>
+</div>
+</div>
+<button class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-white text-terracotta-rich p-2 rounded-full shadow-lg hover:bg-terracotta-rich hover:text-white transition-all duration-300 hidden md:flex items-center justify-center" onclick="this.parentElement.querySelector('.overflow-x-auto').scrollBy({left: -320, behavior: 'smooth'})"><span class="material-symbols-outlined">chevron_left</span></button><button class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-white text-terracotta-rich p-2 rounded-full shadow-lg hover:bg-terracotta-rich hover:text-white transition-all duration-300 hidden md:flex items-center justify-center" onclick="this.parentElement.querySelector('.overflow-x-auto').scrollBy({left: 320, behavior: 'smooth'})"><span class="material-symbols-outlined">chevron_right</span></button></div>
+<div class="mt-10 text-center">
+<a class="inline-block bg-terracotta-rich text-white px-8 py-4 rounded-full font-label-caps text-label-caps shadow-lg shadow-terracotta-rich/20 hover:bg-primary-container transition-all hover:scale-105" href="https://www.google.com/maps/place/Carrer+Mossen+Joan+Batalla,+4,+43850+Cambrils,+Tarragona/@41.0505,1.0494,17z/reviews" target="_blank">
+        Ver todas las reseñas en Google
+      </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<script>
+        // Simple nav shadow effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
