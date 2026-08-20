@@ -1,0 +1,266 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Especialidades | NOU XIVARRI</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#fffbff",
+                        "surface-bright": "#fbf9f1",
+                        "on-background": "#1b1c17",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fffbff",
+                        "primary-fixed": "#ffdbd1",
+                        "primary": "#a33818",
+                        "on-secondary-fixed": "#251a00",
+                        "tertiary": "#605b55",
+                        "secondary": "#785a00",
+                        "terracotta-rich": "#CC5533",
+                        "surface-container-highest": "#e4e3db",
+                        "on-primary-fixed-variant": "#862303",
+                        "secondary-container": "#fdc425",
+                        "tertiary-fixed-dim": "#ccc5be",
+                        "surface-container-low": "#f5f4ec",
+                        "on-tertiary-fixed": "#1e1b16",
+                        "surface-tint": "#a63a1a",
+                        "surface-dim": "#dcdad2",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5a4300",
+                        "on-primary-fixed": "#3b0900",
+                        "background": "#fbf9f1",
+                        "primary-container": "#c44f2e",
+                        "outline": "#8b716a",
+                        "inverse-surface": "#30312c",
+                        "surface-variant": "#e4e3db",
+                        "on-tertiary": "#ffffff",
+                        "deep-earth": "#433422",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c17",
+                        "outline-variant": "#dfc0b8",
+                        "mustard-logo": "#EAB308",
+                        "on-secondary-container": "#6d5200",
+                        "surface-container": "#f0eee6",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e9e1d9",
+                        "inverse-on-surface": "#f3f1e9",
+                        "on-surface-variant": "#58423c",
+                        "secondary-fixed-dim": "#f7be1d",
+                        "on-tertiary-fixed-variant": "#4a4640",
+                        "surface": "#fbf9f1",
+                        "soft-clay": "#D6CFC7",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "secondary-fixed": "#ffdf9a",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#ffb5a0",
+                        "cream-parchment": "#FFFDF5",
+                        "surface-container-high": "#eae8e0",
+                        "tertiary-container": "#79746d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "32px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "stack-lg": "80px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["EB Garamond"],
+                        "headline-sm": ["EB Garamond"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #FFFDF5; /* cream-parchment */
+            color: #1b1c17; /* on-surface */
+        }
+        
+        .glass-nav {
+            background: rgba(255, 253, 245, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Smooth fade in for elements */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden selection:bg-terracotta-rich selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto shadow-sm glass-nav transition-all duration-300 ease-in-out">
+<a class="flex items-center gap-2" href="#">
+<img alt="NOU XIVARRI Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIxjGveHSHMMMIjV8PXYkNw2MQ_ciss3wOGU7aI_Y7Eq--_3cW4041UE9JGKMr1khGL7ckBg7G6Qw1KMl6eAcqFHFiDfN-GcGmHGcLzV7dxXGgorgRLNNBS9dljB5CxEKfaPPpIZSJzrcObDYZlgnsEZpxRIFm-cBNFPQUkFyKu_9q0SOcwilObNmNS-dlq0vm-VZOso7ytkGMcDr_n3tme62GE5ccfU1YPGk6n0YW_KP7kH6qoqu01oEuxCmpaStaOo">
+<span class="font-headline-sm text-headline-sm font-bold text-mustard-logo tracking-tight hidden sm:block">NOU XIVARRI</span>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors transition-all duration-300 ease-in-out hover:opacity-80" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps text-terracotta-rich border-b-2 border-terracotta-rich pb-1 transition-all duration-300 ease-in-out" href="#">Carta</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors transition-all duration-300 ease-in-out hover:opacity-80" href="#">Galería</a>
+</nav>
+<!-- Trailing Action -->
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-terracotta-rich">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</header>
+<main class="pt-24 pb-stack-lg">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-stack-md pb-stack-lg flex flex-col items-center text-center fade-in-up visible">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-earth mb-stack-sm max-w-3xl">Frankfurts y Bocadillos</h1>
+</section>
+<!-- Frankfurts y Salchichas List -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-lg"><div class="flex items-center justify-between mb-stack-md border-b border-soft-clay pb-4 fade-in-up visible"><h2 class="font-headline-md text-headline-md text-deep-earth">Frankfurts y Salchichas</h2></div><div class="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 mx-auto"><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Frankfurt</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€3.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Frankfurt vegano</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€3.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Cervela</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€5.10</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Salchichas</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€5.10</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Súper Cervela</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€6.10</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Súper salchicha</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€6.10</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Salchicha picante</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Tirolesa</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€5.10</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Chistorra de Navarra</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€5.30</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Malagueña</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Frankfurt Moruno</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.80</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Butifarra de Pagés</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€5.50</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Butifarra de Rovellons</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Criollo (Butifarra Argentina)</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€5.50</span></div></div></section>
+<!-- Especialidades en Pan de Cristal y Otros List -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-lg"><div class="flex items-center justify-between mb-stack-md border-b border-soft-clay pb-4 fade-in-up visible"><h2 class="font-headline-md text-headline-md text-deep-earth">Bocadillos</h2></div><div class="max-w-4xl grid grid-cols-1 gap-y-6 mx-auto"><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Bacón</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.80</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Secreto</h4><p class="font-body-md text-body-md text-on-surface-variant">Secreto ibérico confitado en pan de cristal</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€7.20</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Lomo</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.80</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Bikini</h4></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€4.95</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Triquini</h4><p class="font-body-md text-body-md text-on-surface-variant">Triángulos de pan de molde tostado con tomate, lechuga, bacon, queso, mayonesa y patatas fritas</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€8.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Carne Mechada</h4><p class="font-body-md text-body-md text-on-surface-variant">Desmenuzado de carne de costilla de cerdo, cebolla caramelizada, bacon, salsa parrilla, queso cheedar en pan de Cristal</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€9.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Secreto Ibérico Nuevo Xivarri</h4><p class="font-body-md text-body-md text-on-surface-variant">Bocadillo de secreto ibérico confitado, brotes, queso manchego, y Jamon ibérico en pan de cristal</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€9.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Bacon brie</h4><p class="font-body-md text-body-md text-on-surface-variant">Bocadillo de bacón, queso brie, brotes y champiñones en pan de Cristal</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€9.50</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Bocadillo de tiras de Calamar</h4><p class="font-body-md text-body-md text-on-surface-variant">Bocadillo de tiras de Calamar, con mayonesa de Kimchi, brotes, rayadura de limón en pan de tinta de Calamar</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€10.00</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Roast beef</h4><p class="font-body-md text-body-md text-on-surface-variant">Roast beef, en pan de cristal, brotes, tomate desidratado, alcaparras y mayo de mostaza de dijon</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€9.90</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Bocadillo de Salmón</h4><p class="font-body-md text-body-md text-on-surface-variant">Bocadillo de Salmón, en pan de tinta de Calamar, brotes y guacamole</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€10.50</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Vegetal de Remolacha</h4><p class="font-body-md text-body-md text-on-surface-variant">Verduras a la plancha (calabacín, berenjena, pimientos rojo y verdes) champiñones salteados y queso brie en pan de remolacha</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€10.00</span></div><div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible"><div class="pr-4"><h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Bocadillo de Jamón iberico</h4><p class="font-body-md text-body-md text-on-surface-variant">Bocadillo de jamón Ibérico en pan de cristal - solicitar pan con tomate</p></div><span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">€7.00</span></div></div></section>
+<!-- Bocadillos de Autor y Vegetales List -->
+<!-- Clásicos List -->
+</main>
+<!-- Footer -->
+<!-- Simple Intersection Observer for fade-in animations -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+<style>
+/* RESPONSIVE FIXES */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Móvil: máximo 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .px-margin-mobile {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  nav {
+    flex-wrap: wrap !important;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet: 481px a 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  
+  .px-margin-mobile {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Desktop: 769px en adelante */
+@media (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Fixes generales */
+* {
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+section, article {
+  width: 100%;
+  overflow-x: hidden;
+}
+</style>
+</body></html>
