@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ensaladas y Postres - NOU XIVARRI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 w-full z-9999 flex justify-between items-center px-4 md:px-8 py-4 bg-cream-parchment shadow-sm" id="navbar">
+<div class="flex items-center gap-4">
+<a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="index.html">NOU XIVARRI</a>
+</div>
+
+<!-- Desktop Menu -->
+<ul class="hidden md:flex gap-8 items-center">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="index.html">Inicio</a></li>
+<li class="relative group">
+<button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors">
+    Carta
+    <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 -ml-20 mt-2 w-80 bg-cream-parchment rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10000 overflow-visible">
+<div class="py-2">
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a>
+<a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="cervezas.html">Cervezas</a>
+</div>
+</div>
+</li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="galeria.html">Galería</a></li>
+</ul>
+
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface hover:text-terracotta-rich" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+
+<style>
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+}
+
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+}
+</style>
+
+<!-- Content -->
+
+<!-- TopNavBar Component -->
+<header class="glass-nav fixed top-0 w-full z-50 border-b border-soft-clay/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface uppercase tracking-tighter" href="#">
+                NOU XIVARRI
+            </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-terracotta-rich font-bold border-b-2 border-terracotta-rich pb-1" href="#">Carta</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300" href="#">Galería</a>
+
+</nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-stack-lg w-full">
+<!-- Page Header -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-stack-md pb-stack-lg flex flex-col items-center text-center fade-in-up visible">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-earth mb-stack-sm max-w-3xl">Ensaladas y postres</h1>
+</section>
+<!-- Menu List Layout -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-lg">
+<div class="flex items-center justify-between mb-stack-md border-b border-soft-clay pb-4 fade-in-up visible">
+<h2 class="font-headline-md text-headline-md text-deep-earth">Ensaladas y postres</h2>
+</div>
+<div class="max-w-4xl grid grid-cols-1 gap-y-6 mx-auto">
+<!-- Menu Item 1 -->
+<div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible">
+<div class="pr-4">
+<h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Ensalada de pollo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Palomitas de pollo crujiente en salsa cesar, brotes de lechugas, tomate cherry y queso parmesano rallado.</p>
+</div>
+<span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">9,90€</span>
+</div>
+<!-- Menu Item 2 -->
+<div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible">
+<div class="pr-4">
+<h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Ensalada xivarri</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Brotes de lechuga, tomate cherry, cebolla morada, champiñones y maiz dulce.</p>
+</div>
+<span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">9,50€</span>
+</div>
+<!-- Menu Item 3 -->
+<div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible">
+<div class="pr-4">
+<h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Carpaccio de tomate</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Finas rodajas de tomate, ventresca de bonito, cebolla morada, perlas de wasabi, olivada y acceso balsamico.</p>
+</div>
+<span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">9,90€</span>
+</div>
+<!-- Menu Item 4 -->
+<div class="flex justify-between items-start border-b border-soft-clay/50 pb-4 fade-in-up visible">
+<div class="pr-4">
+<h4 class="font-headline-sm text-headline-sm text-deep-earth mb-1">Ensalada de salmón</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Wakame, brotes, tomate cherry, salmón, piña, palimotos, pistachos y salsa Tereyaki.</p>
+</div>
+<span class="font-headline-sm text-headline-sm text-terracotta-rich shrink-0">11€</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full bg-surface-container dark:bg-on-background mt-auto transition-all duration-300">
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body>
+</html>
