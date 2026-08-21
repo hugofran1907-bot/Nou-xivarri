@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="light" lang="es"><head>
+<!DOCTYPE html><html style="overflow-x: hidden;"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Galería - NOU XIVARRI</title>
@@ -207,7 +207,9 @@
 <script>
 function toggleMobileMenu() {
   const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('hidden');
+  if (menu) {
+    menu.classList.toggle('hidden');
+  }
 }
 </script>
 <!-- Main Content Canvas -->
