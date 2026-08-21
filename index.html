@@ -172,7 +172,7 @@
         }
     </style>
 </head>
-<body class="bg-cream-parchment text-on-surface antialiased  selection:bg-terracotta-rich selection:text-white">
+<body class="font-body-md text-body-md antialiased selection:bg-terracotta-rich selection:text-white" style="overflow-x: hidden; width: 100%; max-width: 100%; margin: 0; padding: 0;">
 <!-- Navigation (Shared Component) -->
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out" id="navbar">
 <div class="flex items-center gap-4">
@@ -356,4 +356,21 @@
 
 
 
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  if (menu) {
+    menu.classList.toggle('hidden');
+  }
+}
+
+// Cerrar menú al hacer click fuera
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('mobile-menu-btn');
+  if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
+    menu.classList.add('hidden');
+  }
+});
+</script>
 </body></html>
