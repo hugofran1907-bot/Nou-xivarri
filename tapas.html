@@ -1,0 +1,282 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tapas - NOU XIVARRI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1b1c17",
+                        "tertiary-fixed": "#e9e1d9",
+                        "on-secondary-container": "#6d5200",
+                        "primary-fixed": "#ffdbd1",
+                        "inverse-primary": "#ffb5a0",
+                        "deep-earth": "#433422",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#dcdad2",
+                        "soft-clay": "#D6CFC7",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#862303",
+                        "background": "#fbf9f1",
+                        "surface-container-low": "#f5f4ec",
+                        "mustard-logo": "#EAB308",
+                        "surface-container-high": "#eae8e0",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-bright": "#fbf9f1",
+                        "secondary": "#785a00",
+                        "surface-container-highest": "#e4e3db",
+                        "on-secondary-fixed-variant": "#5a4300",
+                        "surface-tint": "#a63a1a",
+                        "surface-container": "#f0eee6",
+                        "tertiary-container": "#79746d",
+                        "on-tertiary-fixed-variant": "#4a4640",
+                        "secondary-container": "#fdc425",
+                        "surface-variant": "#e4e3db",
+                        "on-surface-variant": "#58423c",
+                        "on-tertiary-fixed": "#1e1b16",
+                        "inverse-on-surface": "#f3f1e9",
+                        "inverse-surface": "#30312c",
+                        "on-tertiary-container": "#fffbff",
+                        "primary": "#a33818",
+                        "secondary-fixed": "#ffdf9a",
+                        "tertiary-fixed-dim": "#ccc5be",
+                        "on-background": "#1b1c17",
+                        "on-primary-fixed": "#3b0900",
+                        "primary-container": "#c44f2e",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "cream-parchment": "#FFFDF5",
+                        "terracotta-rich": "#CC5533",
+                        "surface": "#fbf9f1",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#dfc0b8",
+                        "outline": "#8b716a",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#605b55",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#f7be1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-sm": "16px",
+                        "stack-lg": "80px",
+                        "margin-desktop": "64px",
+                        "stack-md": "32px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "headline-sm": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.cream-parchment'); }
+        .glass-nav { background: rgba(255, 253, 245, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col bg-cream-parchment">
+<!-- TopNavBar Component -->
+<header class="glass-nav fixed top-0 w-full z-50 border-b border-soft-clay/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto"><a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="#">NOU XIVARRI</a>
+
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-gutter items-center"><a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300" href="#">INICIO</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-terracotta-rich font-bold border-b-2 border-terracotta-rich pb-1" href="#">CARTA</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300" href="#">GALERÍA</a></nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header -->
+<div class="text-center mb-stack-lg animate-fade-in-up">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-earth mb-stack-sm"><span style="background-color: rgb(251, 249, 241); color: rgb(204, 85, 51);">Tapas</span></h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto">Nuestra selección de tapas, preparadas con ingredientes frescos y el toque mediterráneo de siempre.</p>
+</div>
+<!-- Menu Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-stack-md relative">
+<!-- Tapas Item 1 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Torreznos de Soria</h3>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">9,90€</span>
+</div>
+</div>
+<!-- Tapas Item 2 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Nachos</h3>
+<p class="font-body-md text-body-md text-on-surface">Guacamole queso cheedar fundido, salsa mexicana, jalapeños y carne picada</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">11,50€</span>
+</div>
+</div>
+<!-- Tapas Item 3 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Croquetas de pollo y jamon</h3>
+<p class="font-body-md text-body-md text-on-surface">6 unidades</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">10,50€</span>
+</div>
+</div>
+<!-- Tapas Item 4 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Filetes de pollo crujiente</h3>
+<p class="font-body-md text-body-md text-on-surface">Acompañados con salsa de curry y mango</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">9,50€</span>
+</div>
+</div>
+<!-- Tapas Item 5 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Alitas de pollo barbacoa</h3>
+<p class="font-body-md text-body-md text-on-surface">6 unidades</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">7,90€</span>
+</div>
+</div>
+<!-- Tapas Item 6 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Tequeños de queso</h3>
+<p class="font-body-md text-body-md text-on-surface">Acompañados con salsa guasacaca (6unidades)</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">8,90€</span>
+</div>
+</div>
+<!-- Tapas Item 7 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Tiras de Calamar</h3>
+<p class="font-body-md text-body-md text-on-surface">Acompañadas con mayonesa de Kimchi</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">8,90€</span>
+</div>
+</div>
+<!-- Tapas Item 8 -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+<div class="pr-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Surtido de salchicas</h3>
+<p class="font-body-md text-body-md text-on-surface">3 variedades</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-headline-sm text-headline-sm text-terracotta-rich">9,50€</span>
+</div>
+</div>
+<!-- Patatas y Olivas Section (Smaller Items) -->
+
+<!-- Patatas chips -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+    <div class="pr-4">
+        <h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Patatas chips</h3>
+    </div>
+    <div class="shrink-0 text-right">
+        <span class="font-headline-sm text-headline-sm text-terracotta-rich">2€/ud</span>
+    </div>
+</div>
+<!-- Patatas Bravas -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+    <div class="pr-4">
+        <h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Patatas Bravas</h3>
+    </div>
+    <div class="shrink-0 text-right">
+        <span class="font-headline-sm text-headline-sm text-terracotta-rich">6,50€</span>
+    </div>
+</div>
+<!-- Patatas fritas -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+    <div class="pr-4">
+        <h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Patatas fritas</h3>
+    </div>
+    <div class="shrink-0 text-right">
+        <span class="font-headline-sm text-headline-sm text-terracotta-rich">4,95€</span>
+    </div>
+</div>
+<!-- Olivas picantonas -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+    <div class="pr-4">
+        <h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Olivas picantonas</h3>
+    </div>
+    <div class="shrink-0 text-right">
+        <span class="font-headline-sm text-headline-sm text-terracotta-rich">3€</span>
+    </div>
+</div>
+<!-- Olivas Rellenas -->
+<div class="group flex justify-between items-start border-b border-soft-clay pb-stack-sm hover:bg-surface-container-low/50 transition-colors duration-300 p-4 rounded-lg -mx-4 md:mx-0">
+    <div class="pr-4">
+        <h3 class="font-headline-sm text-headline-sm text-deep-earth mb-2 group-hover:text-terracotta-rich transition-colors">Olivas Rellenas</h3>
+    </div>
+    <div class="shrink-0 text-right">
+        <span class="font-headline-sm text-headline-sm text-terracotta-rich">3€</span>
+    </div>
+</div></div>
+</main>
+<!-- Footer Component -->
+
+<style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+</body></html>
