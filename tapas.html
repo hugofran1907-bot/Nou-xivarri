@@ -123,11 +123,24 @@
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-8"><ul class="hidden md:flex gap-8 items-center"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html">Inicio</a></li><li class="relative group"><button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase">Carta<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"><div class="py-2"><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="cerveza.html">Cervezas</a></div></div></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="galeria.html">Galería</a></li></ul></nav>
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors">
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </header>
+<ul id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-surface shadow-xl flex flex-col gap-0 p-4 md:hidden z-40">
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a></li>
+<li><button class="w-full text-left py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase flex justify-between" onclick="document.getElementById('mobile-carta').classList.toggle('hidden')">Carta<span class="material-symbols-outlined text-sm">expand_more</span></button>
+<div id="mobile-carta" class="hidden bg-surface-container-low border-t border-outline-variant/20">
+<a class="block px-8 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="frankfurt.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Frankfurt y bocadillos</a>
+<a class="block px-8 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="hamburguesas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Hamburguesas y suplementos</a>
+<a class="block px-8 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="tapas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Tapas</a>
+<a class="block px-8 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="ensaladas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Ensaladas y postres</a>
+<a class="block px-8 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="cerveza.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Cervezas</a>
+</div>
+</li>
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="galeria.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Galería</a></li>
+</ul>
 <!-- Main Content Canvas -->
 <main class="flex-grow pt-[120px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 <!-- Page Header -->
