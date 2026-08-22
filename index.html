@@ -4,9 +4,10 @@ body {
     overflow-x: hidden !important; 
     width: 100%;
 }
-.overflow-x-auto {
-    width: 100% !important;
-    max-width: 100vw !important;
+@media (max-width: 768px) {
+    * {
+        max-width: 100% !important;
+    }
 }
 </style>
 
@@ -212,9 +213,9 @@ body {
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-margin-mobile md:px-margin-desktop">
-<div class="absolute z-0">
+<div class="absolute inset-0 z-0">
 <div class="bg-cover bg-center w-full h-full opacity-40" data-alt="A bright, sun-drenched interior of a high-end Mediterranean gastro-bar. Soft golden hour light streams through large windows, illuminating natural wood tables, terracotta accents, and fresh culinary ingredients. The scene is warm, inviting, and captures the vibrant energy of Basque cuisine in a light-mode aesthetic." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAAPwYU7o9-ZuxikHd1aez6CFiScbuWQaJTIrXb-lxQA-K1FNez7E9Wf36W5D682mWExz8mwXErKvzE4o-WeGvbly0ecmSIEFLas1YfdWvqCbSKJ9BWSh7AtTN1B-4shsRkj1uQym1yb1deMVudl-Vw8zltiVNhDsfcXrxQfo8LCx6qTorHKHQA8FloBgbMGh0CzYYo1aa1IJX2gmLqR4LHPnCZqfhbMhfVQTY1rxq3sDuXWI2rbwtu1VEPc0wfudtDFI8&quot;);"></div>
-<div class="absolute bg-gradient-to-t from-cream-parchment via-cream-parchment/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-cream-parchment via-cream-parchment/60 to-transparent"></div>
 </div>
 <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
 <img alt="Nou Xivarri Logo" class="w-32 md:w-48 mb-8 drop-shadow-md animate-fade-in-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTG0A03v5f7pmEm00SsSo0yFKEv6mEddeY6clZNhXybXPsO57WT-Gpt9PKV5FrxaQY8dEviwt3U3w38grEA4LkXURNPutMVCTEJKN9Enh2td-7VdRXR3tj0GNs6NSMelWJbdnqsChnCFstrPsph0iQ2b-RqzG1XEsXjbmUJQRJYtxdqFExOBum8oZwUyNtBUUoH0h--0DlHAVhRu6t64eXyr8AOY29V2OGMgqRWquS_GCMXYrTu-XPHScBI3r3S0IB858">
