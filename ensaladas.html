@@ -178,7 +178,7 @@
 </button>
 </div>
 </header>
-<ul id="mobile-menu" class="hidden fixed top-16 inset-0 left-0 right-0 max-w-full w-screen bg-surface shadow-xl flex flex-col gap-0 md:hidden z-40" style="overflow-x: hidden; overflow-y: auto;">
+<ul id="mobile-menu" class="hidden fixed top-16  w-full bg-surface shadow-xl flex flex-col gap-0 md:hidden z-40" style="overflow-x: hidden; overflow-y: auto;">
 <li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a></li>
 <li><button class="w-full text-left py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase flex justify-between" onclick="document.getElementById('mobile-carta').classList.toggle('hidden')">Carta<span class="material-symbols-outlined text-sm">expand_more</span></button>
 <div id="mobile-carta" class="hidden bg-surface-container-low border-t border-outline-variant/20 overflow-hidden">
@@ -242,4 +242,35 @@
 </article>
 </div>
 </main>
-<footer class="w-full bg-surface-container dark:bg-on-background mt-auto transition-all duration-300"></footer></body></html>
+<footer class="w-full bg-surface-container dark:bg-on-background mt-auto transition-all duration-300"></footer>
+    <script>
+    // Bloquear scroll horizontal
+    document.addEventListener('touchmove', function(e) {
+        const touch = e.touches[0];
+        const scrollLeft = document.documentElement.scrollLeft;
+        if (scrollLeft > 0) {
+            e.preventDefault();
+            window.scrollTo(0, window.scrollY);
+        }
+    }, false);
+    
+    // Mantener scroll vertical pero bloquear horizontal
+    let lastX = 0;
+    document.addEventListener('touchstart', function(e) {
+        lastX = e.touches[0].clientX;
+    }, false);
+    
+    document.addEventListener('touchend', function(e) {
+        if (document.documentElement.scrollLeft > 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+    }, false);
+    
+    // Bloquear horizontal en resize
+    window.addEventListener('resize', function() {
+        if (document.documentElement.scrollLeft > 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+    });
+    </script>
+</body></html>
