@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>NOU XIVARRI - Gastronomía Vasca</title>
+<title>Inicio - NOU XIVARRI</title>
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -172,29 +172,17 @@
         }
     </style>
 </head>
-<body class="bg-cream-parchment text-on-surface antialiased selection:bg-terracotta-rich selection:text-white" style="overflow-x: hidden; width: 100%; max-width: 100%; margin: 0; padding: 0;">
+<body class="bg-cream-parchment text-on-surface antialiased overflow-x-hidden selection:bg-terracotta-rich selection:text-white">
 <!-- Navigation (Shared Component) -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-screen-2xl mx-auto shadow-sm transition-all duration-300 ease-in-out" style="overflow-x: hidden; background-color: #fbf9f1; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"><a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity cursor-text" href="index.html">NOU XIVARRI</a>
-
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-8"><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300 ease-in-out" href="index.html">INICIO</a><li class="relative group" style="list-style: none;"><button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300 ease-in-out">CARTA<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"><div class="py-2"><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="cerveza.html">Cervezas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="galeria.html">Galería</a></div></div></li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors duration-300 ease-in-out" href="galeria.html">GALERÍA</a></nav>
-
-<!-- Mobile Menu Toggle -->
-<button class="md:hidden text-terracotta-rich" id="mobile-menu-btn" onclick="toggleMobileMenu()">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 28px;">menu</span>
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out" id="navbar">
+<div class="flex items-center gap-4">
+<a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="index.html">NOU XIVARRI</a>
+</div>
+<ul class="hidden md:flex gap-8 items-center"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="#">Inicio</a></li><li class="relative group"><button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase">Carta<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"><div class="py-2"><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a></div></div></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="#gallery">Galería</a></li></ul>
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors">
+<span class="material-symbols-outlined text-2xl">menu</span>
 </button>
-
-<!-- Mobile Menu -->
-<nav id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-surface-container-lowest z-40 flex flex-col gap-4 px-4 py-6 max-h-screen overflow-y-auto">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="index.html">INICIO</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="cerveza.html">Cervezas</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors" href="galeria.html">GALERÍA</a>
 </nav>
-</header>
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-margin-mobile md:px-margin-desktop">
@@ -207,7 +195,7 @@
 <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-deep-earth mb-6 text-5xl md:text-7xl">Nou Xivarri Cerveseria&nbsp;</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl text-xl"></p><div class="">Comida rápida con calidad. Frankfurts, hamburguesas, bocadillos&nbsp;</div><div class="">especiales y cerveza fría en Cambrils.</div><p></p>
 <div class="flex flex-col sm:flex-row gap-4">
-<button onclick="window.location.href='frankfurt.html'" class="bg-terracotta-rich text-white px-8 py-4 rounded-full font-label-caps text-label-caps shadow-lg shadow-terracotta-rich/20 hover:bg-primary-container transition-all hover:scale-105 mt-8">Descubre la carta</button>
+<button class="bg-terracotta-rich text-white px-8 py-4 rounded-full font-label-caps text-label-caps shadow-lg shadow-terracotta-rich/20 hover:bg-primary-container transition-all hover:scale-105 mt-8">Descrubre la carta</button>
 </div>
 </div>
 </section>
@@ -368,20 +356,4 @@
 
 
 
-<script>
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  if (menu) {
-    menu.classList.toggle('hidden');
-  }
-}
-
-document.addEventListener('click', function(event) {
-  const menu = document.getElementById('mobile-menu');
-  const btn = document.getElementById('mobile-menu-btn');
-  if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
-    menu.classList.add('hidden');
-  }
-});
-</script>
 </body></html>
