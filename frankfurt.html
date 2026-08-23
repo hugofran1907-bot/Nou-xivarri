@@ -2,21 +2,23 @@
 
 <html class="scroll-smooth" lang="es" style=""><head>
 <style>
-    html, body {
-        overflow-x: hidden !important;
-        width: 100%;
-        max-width: 100%;
-    }
-    body {
-        position: relative;
-        width: 100vw;
-        max-width: 100vw;
-    }
-    </style>
-
-
-
-
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
+}
+body {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+}
+.gallery-image-hover {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+</style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Especialidades | NOU XIVARRI</title>
@@ -127,7 +129,7 @@
     </script>
 <style>
         body {
-            background-color: #FFFDF5; /* cream-parchment */
+            background-color: #ffffff; /* pure white */
             color: #1b1c17; /* on-surface */
         }
         
@@ -150,21 +152,20 @@
         }
     </style>
 </head>
-<body class="font-body-md text-body-md antialiased overflow-x-hidden selection:bg-terracotta-rich selection:text-white bg-surface">
+<body class="font-body-md text-body-md antialiased overflow-x-hidden selection:bg-terracotta-rich selection:text-white text-on-surface bg-white">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto shadow-sm glass-nav transition-all duration-300 ease-in-out"><a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity cursor-text" href="index.html">NOU XIVARRI</a>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-8"><ul class="hidden md:flex gap-8 items-center"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html">Inicio</a></li><li class="relative group"><button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase">Carta<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"><div class="py-2"><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="cerveza.html">Cervezas</a></div></div></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="galeria.html">Galería</a></li></ul></nav>
-<!-- Trailing Action -->
-<!-- Mobile Menu Toggle -->
-<button class="md:hidden text-terracotta-rich" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out" id="navbar">
+<div class="flex items-center gap-4">
+<a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="#">NOU XIVARRI</a>
+</div>
+<ul class="hidden md:flex gap-8 items-center"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html">Inicio</a></li><li class="relative group"><button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase">Carta<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"><div class="py-2"><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a></div></div></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="#gallery">Galería</a></li></ul>
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-2xl">menu</span>
 </button>
-</header>
-<ul id="mobile-menu" class="hidden fixed top-16  w-full bg-surface shadow-xl flex flex-col gap-0 md:hidden z-40" >
+<ul id="mobile-menu" class="hidden fixed top-16 left-0 right-0 w-full bg-surface shadow-xl flex flex-col gap-0 p-4 md:hidden z-40">
 <li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a></li>
 <li><button class="w-full text-left py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase flex justify-between" onclick="document.getElementById('mobile-carta').classList.toggle('hidden')">Carta<span class="material-symbols-outlined text-sm">expand_more</span></button>
-<div id="mobile-carta" class="hidden bg-surface-container-low border-t border-outline-variant/20 overflow-hidden">
+<div id="mobile-carta" class="hidden bg-surface-container-low border-t border-outline-variant/20">
 <a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="frankfurt.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Frankfurt y bocadillos</a>
 <a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="hamburguesas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Hamburguesas y suplementos</a>
 <a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="tapas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Tapas</a>
@@ -174,118 +175,126 @@
 </li>
 <li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="galeria.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Galería</a></li>
 </ul>
+</nav>
 <main class="pt-24 pb-stack-lg">
 <!-- Hero Section -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-stack-md pb-stack-lg flex flex-col items-center text-center fade-in-up visible">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-earth mb-stack-sm max-w-3xl"><span style="background-color: rgb(251, 249, 241); color: rgb(204, 85, 51);">Frankfurts y Bocadillos</span></h1>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-earth mb-stack-sm max-w-3xl"><span class="" style="color: rgb(204, 85, 51);">Frankfurts y Bocadillos</span></h1>
 </section>
 <!-- Frankfurts y Salchichas List -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-lg"><div class="flex items-center gap-4 mb-stack-sm">
-<h2 class="font-headline-md text-headline-md text-deep-earth">Frankfurts</h2>
+<h2 class="font-headline-md text-headline-md text-deep-earth">Frankfurts y Salchichas</h2>
 <div class="h-px bg-soft-clay flex-grow"></div>
 </div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Frankfurt</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">3,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Frankfurt</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">3,90€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Frankfurt vegano</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">3,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Frankfurt vegano</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">3,90€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Cervela</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">5,10€</span>
-</div>
-</div>
-</article>
-
-<article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
-<div>
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Súper Cervela</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">6,10€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Cervela</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">5,10€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Súper salchicha</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">6,10€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Salchichas</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">5,10€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Salchicha picante</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Súper Cervela</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">6,10€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Tirolesa</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">5,10€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Súper salchicha</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">6,10€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Chistorra de Navarra</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">5,30€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Salchicha picante</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,90€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Malagueña</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Tirolesa</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">5,10€</span>
+</div>
+</div>
+</article>
+<article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Chistorra de Navarra</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">5,30€</span>
+</div>
+</div>
+</article>
+<article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Malagueña</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,90€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30_px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Frankfurt Moruno</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,80€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Frankfurt Moruno</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,80€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Butifarra de Pagés</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">5,50€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Butifarra de Pagés</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">5,50€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Butifarra de Rovellons</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Butifarra de Rovellons</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,90€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Criollo (Butifarra Argentina)</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">5,50€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Criollo (Butifarra Argentina)</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">5,50€</span>
 </div>
 </div>
 </article>
@@ -298,16 +307,16 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Bacón</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,80€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Bacón</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,80€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Secreto</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">7,20€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Secreto</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">7,20€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Secreto ibérico confitado en pan de cristal</p>
 </div>
@@ -315,24 +324,24 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Lomo</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,80€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Lomo</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,80€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Bikini</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">4,95€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Bikini</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">4,95€</span>
 </div>
 </div>
 </article>
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Triquini</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">8,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Triquini</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">8,90€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Triángulos de pan de molde tostado con tomate, lechuga, bacon, queso, mayonesa y patatas fritas</p>
 </div>
@@ -340,8 +349,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Carne Mechada</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">9,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Carne Mechada</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">9,90€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Desmenuzado de carne de costilla de cerdo, cebolla caramelizada, bacon, salsa parrilla, queso cheedar en pan de Cristal</p>
 </div>
@@ -349,8 +358,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Secreto Ibérico Nuevo Xivarri</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">9,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Secreto Ibérico Nuevo Xivarri</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">9,90€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Bocadillo de secreto ibérico confitado, brotes, queso manchego, y Jamon ibérico en pan de cristal</p>
 </div>
@@ -358,8 +367,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Bacon brie</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">9,50€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Bacon brie</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">9,50€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Bocadillo de bacón, queso brie, brotes y champiñones en pan de Cristal</p>
 </div>
@@ -367,8 +376,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Bocadillo de tiras de Calamar</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">10,00€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Bocadillo de tiras de Calamar</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">10,00€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Bocadillo de tiras de Calamar, con mayonesa de Kimchi, brotes, rayadura de limón en pan de tinta de Calamar</p>
 </div>
@@ -376,8 +385,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Roast beef</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">9,90€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Roast beef</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">9,90€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Roast beef, en pan de cristal, brotes, tomate desidratado, alcaparras y mayo de mostaza de dijon</p>
 </div>
@@ -385,8 +394,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Bocadillo de Salmón</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">10,50€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Bocadillo de Salmón</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">10,50€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Bocadillo de Salmón, en pan de tinta de Calamar, brotes y guacamole</p>
 </div>
@@ -394,8 +403,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Vegetal de Remolacha</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">10,00€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Vegetal de Remolacha</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">10,00€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Verduras a la plancha (calabacín, berenjena, pimientos rojo y verdes) champiñones salteados y queso brie en pan de remolacha</p>
 </div>
@@ -403,8 +412,8 @@
 <article class="p-6 rounded-lg shadow-[0_4px_20px_-4px_rgba(67,52,34,0.05)] border border-soft-clay/30 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(67,52,34,0.1)] transition-shadow duration-300 bg-surface">
 <div>
 <div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm" style="color: black;">Bocadillo de Jamón iberico</h3>
-<span class="font-body-lg text-body-lg font-bold ml-4" style="color: rgb(204, 0, 0);">7,00€</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(0, 0, 0);">Bocadillo de Jamón iberico</h3>
+<span class="font-body-lg text-body-lg font-bold ml-4 text-terracotta-rich" style="color: rgb(204, 85, 51);">7,00€</span>
 </div>
 <p class="font-body-md text-body-md" style="color: black;">Bocadillo de jamón Ibérico en pan de cristal - solicitar pan con tomate</p>
 </div>
@@ -415,7 +424,26 @@
 </main>
 <!-- Footer -->
 <!-- Simple Intersection Observer for fade-in animations -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-    
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body></html>
