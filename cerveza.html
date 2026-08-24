@@ -18,27 +18,6 @@ body {
     top: 0 !important;
     left: 0 !important;
 }
-
-/* Grid para cervezas */
-.grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.5rem !important;
-    width: 100% !important;
-}
-@media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-@media (min-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-}
-article {
-    width: 100% !important;
-}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -143,82 +122,33 @@ article {
             }
         }
     </script>
-<style>
-/* Full Screen Menu - La Tauleta Style */
-#sidebar-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(135deg, #ffffff 0%, #fffdf5 100%);
-  z-index: 50;
-  overflow-y: auto;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  padding: 80px 2rem 2rem 2rem;
-}
-
-#sidebar-menu.open {
-  transform: translateX(0);
-}
-
-#sidebar-menu ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  list-style: none;
-}
-
-#sidebar-menu a, #sidebar-menu button {
-  font-size: 24px;
-  font-weight: 600;
-  color: #433422;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-#sidebar-menu a:hover, #sidebar-menu button:hover {
-  color: #CC5533;
-}
-
-.sidebar-submenu {
-  display: none;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.sidebar-submenu.open {
-  display: flex;
-}
-
-.sidebar-submenu a {
-  font-size: 18px;
-  color: #8B7355;
-}
-
-.sidebar-submenu a:hover {
-  color: #CC5533;
-}
-</style>
 </head>
 <body class="text-on-surface font-body-md antialiased min-h-screen flex flex-col bg-surface" style="background-color: #ffffff;"><!-- TopNavBar -->
-<header class="fixed top-0 w-full z-40 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-2 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-2 max-w-container-max mx-auto">
-<a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="index.html">NOU XIVARRI</a>
-<button class="text-on-surface hover:text-terracotta-rich transition-colors" id="sidebar-toggle" onclick="document.getElementById('sidebar-menu').classList.toggle('open')">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-2 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-2 max-w-container-max mx-auto"><a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="#">NOU XIVARRI</a>
+<div class="flex items-center">
+<ul class="hidden md:flex gap-8 items-center"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html">Inicio</a></li><li class="relative group"><button class="flex items-center gap-1 font-label-caps text-label-caps text-terracotta-rich font-bold border-b-2 border-terracotta-rich pb-1 opacity-80 transition-all uppercase">Carta<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"><div class="py-2"><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a><a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a></div></div></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="#gallery">Galería</a></li></ul>
+<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
 <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
-</button>
+</button></div>
 </div>
 </header>
-
+<ul id="mobile-menu" class="hidden fixed top-16 left-0 right-0 w-full bg-surface shadow-xl flex flex-col gap-0 p-4 md:hidden z-40">
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a></li>
+<li><button class="w-full text-left py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase flex justify-between" onclick="document.getElementById('mobile-carta').classList.toggle('hidden')">Carta<span class="material-symbols-outlined text-sm">expand_more</span></button>
+<div id="mobile-carta" class="hidden bg-surface-container-low border-t border-outline-variant/20">
+<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="frankfurt.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Frankfurt y bocadillos</a>
+<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="hamburguesas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Hamburguesas y suplementos</a>
+<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="tapas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Tapas</a>
+<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="ensaladas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Ensaladas y postres</a>
+<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="cerveza.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Cervezas</a>
+</div>
+</li>
+<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="galeria.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Galería</a></li>
+</ul>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow pt-[80px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full min-h-screen">
+<main class="flex-grow pt-[100px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 <!-- Header Section -->
 <div class="text-center mb-stack-md">
 <span class="inline-block bg-mustard-logo/20 text-deep-earth font-label-caps text-label-caps px-4 py-1 rounded-full mb-4">BEBIDAS</span>
@@ -226,7 +156,7 @@ article {
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Nuestra selección de cervezas frías para acompañar los mejores momentos.</p>
 </div>
 <!-- Cervezas Grid -->
-<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-gutter w-full" style="min-height: auto;">
+<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Estrella Damm -->
 <article class="rounded-xl p-6 flex flex-col items-center text-center shadow-lg border border-outline-variant/20 hover:-translate-y-1 transition-transform duration-300 bg-surface">
 <div class="w-32 h-32 md:w-48 md:h-48 mb-4 md:mb-6 relative">
@@ -359,58 +289,4 @@ article {
 </main>
 <!-- Footer -->
 <footer class="mt-auto bg-surface-container w-full">
-</footer><!-- Full Screen Menu -->
-<nav id="sidebar-menu" class="flex flex-col">
-<button class="absolute top-6 right-6 text-on-surface hover:text-terracotta-rich transition-colors" onclick="document.getElementById('sidebar-menu').classList.remove('open')">
-<span class="material-symbols-outlined" style="font-size: 32px;">close</span>
-</button>
-
-<ul>
-<li><a href="index.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">INICIO</a></li>
-
-<li>
-<button onclick="document.getElementById('carta-submenu').classList.toggle('open')" style="text-align: left; border: none; background: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
-CARTA
-<span class="material-symbols-outlined" style="font-size: 24px;">expand_more</span>
-</button>
-<div id="carta-submenu" class="sidebar-submenu">
-<a href="frankfurt.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Frankfurt y bocadillos</a>
-<a href="hamburguesas.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Hamburguesas</a>
-<a href="tapas.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Tapas</a>
-<a href="ensaladas.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Ensaladas y postres</a>
-<a href="cerveza.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Cervezas</a>
-</div>
-</li>
-
-<li><a href="galeria.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">GALERÍA</a></li>
-</ul>
-
-<div class="mt-auto pt-8 border-t border-outline-variant/20">
-<p class="text-sm text-on-surface-variant mb-2">📞 977 21 73 33</p>
-<p class="text-xs text-on-surface-variant">Carrer Mossèn Joan Batalla, 4</p>
-<p class="text-xs text-on-surface-variant">43850 Cambrils, Tarragona</p>
-</div>
-</nav>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const menu = document.getElementById('sidebar-menu');
-  const cartaBtn = document.querySelector('button[onclick*="carta-submenu"]');
-  const cartaSubmenu = document.getElementById('carta-submenu');
-  
-  cartaBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    cartaSubmenu.classList.toggle('open');
-  });
-  
-  document.addEventListener('click', function(event) {
-    if (!menu.contains(event.target) && !document.querySelector('#sidebar-toggle').contains(event.target)) {
-      if (menu.classList.contains('open')) {
-        // No cerrar al hacer clic
-      }
-    }
-  });
-});
-</script>
-
-</body></html>
+</footer></body></html>
