@@ -197,118 +197,60 @@ body {
               filter: brightness(1.1);
           }
       </style>
-</head>
-<body class="antialiased min-h-screen flex flex-col bg-background" style="background-color: rgb(255, 255, 255);">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-2 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
-<a class="font-headline-sm text-headline-sm font-bold text-mustard-logo hover:opacity-80 transition-opacity" href="#">NOU XIVARRI</a>
-<ul class="hidden md:flex gap-8 items-center">
-  <li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html">Inicio</a></li>
-  <li class="relative group">
-    <button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase">Carta<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button>
-    <div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
-      <div class="py-2">
-        <a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="frankfurt.html">Frankfurt y bocadillos</a>
-        <a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="hamburguesas.html">Hamburguesas y suplementos</a>
-        <a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="tapas.html">Tapas</a>
-        <a class="block px-6 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-terracotta-rich transition-colors" href="ensaladas.html">Ensaladas y postres</a>
-      </div>
-    </div>
-  </li>
-  <li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="#gallery">Galería</a></li>
-</ul>
-<button class="md:hidden text-on-surface hover:text-terracotta-rich transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-  <span class="material-symbols-outlined text-2xl">menu</span>
+
+
+<!-- Full Screen Menu -->
+<nav id="sidebar-menu" class="flex flex-col">
+<button class="absolute top-6 right-6 text-on-surface hover:text-terracotta-rich transition-colors" onclick="document.getElementById('sidebar-menu').classList.remove('open')">
+<span class="material-symbols-outlined" style="font-size: 32px;">close</span>
 </button>
-</header>
-<ul id="mobile-menu" class="hidden fixed top-16 left-0 right-0 w-full bg-surface shadow-xl flex flex-col gap-0 p-4 md:hidden z-40">
-<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a></li>
-<li><button class="w-full text-left py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase flex justify-between" onclick="document.getElementById('mobile-carta').classList.toggle('hidden')">Carta<span class="material-symbols-outlined text-sm">expand_more</span></button>
-<div id="mobile-carta" class="hidden bg-surface-container-low border-t border-outline-variant/20">
-<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="frankfurt.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Frankfurt y bocadillos</a>
-<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="hamburguesas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Hamburguesas y suplementos</a>
-<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="tapas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Tapas</a>
-<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="ensaladas.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Ensaladas y postres</a>
-<a class="block py-3 px-6 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-lowest hover:text-terracotta-rich transition-colors text-sm" href="cerveza.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Cervezas</a>
+
+<ul>
+<li><a href="index.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">INICIO</a></li>
+
+<li>
+<button onclick="document.getElementById('carta-submenu').classList.toggle('open')" style="text-align: left; border: none; background: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+CARTA
+<span class="material-symbols-outlined" style="font-size: 24px;">expand_more</span>
+</button>
+<div id="carta-submenu" class="sidebar-submenu">
+<a href="frankfurt.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Frankfurt y bocadillos</a>
+<a href="hamburguesas.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Hamburguesas</a>
+<a href="tapas.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Tapas</a>
+<a href="ensaladas.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Ensaladas y postres</a>
+<a href="cerveza.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">Cervezas</a>
 </div>
 </li>
-<li><a class="block py-3 px-4 font-label-caps text-label-caps text-on-surface-variant hover:text-terracotta-rich transition-colors uppercase" href="galeria.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Galería</a></li>
+
+<li><a href="galeria.html" onclick="document.getElementById('sidebar-menu').classList.remove('open')">GALERÍA</a></li>
 </ul>
-<!-- Main Content Canvas -->
-<main class="flex-grow pt-[100px] md:pt-[120px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
-<!-- Header Section -->
-<section class="text-center mb-stack-lg max-w-3xl mx-auto">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-earth mb-stack-sm"><span style="color: rgb(204, 85, 51);" class="">Galería de Momentos</span></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Descubre la esencia vibrante y cálida de NOU XIVARRI. Un recorrido visual por nuestros pintxos artesanales, el acogedor ambiente de Cambrils y los instantes que hacen único nuestro gastro-bar.</p>
-</section>
-<!-- Bento Grid Gallery -->
-<section class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[300px]"><!-- Item 1: Terrace Ambiance (Large) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-8 row-span-1 md:row-span-2 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQA6dQcUIh_AH5SHDRJoQ1UfgmSFDXNHsOxKRyewhUycgquXd-ljOroC_waBPkrgfLu-wc3J6l3mM2PHlcpjGCZr_Wj3oOLUivXzPY_X0BmYzafVLFQrriukQV-G-a0FuiAMkSW5IrzhEZRE8gaGyR--TCkJne0bUBhMG4N6CIMu04jk8AiFX0GPdyi1PsR27BNbCfbXpvlr6GCwVLBD26shmbbA4B9qsI4DALZO2ihC1VLkxDjpadzoLsdZGKyd7HiNo')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<span class="inline-block px-3 py-1 bg-mustard-logo text-deep-earth font-label-caps text-label-caps rounded-full mb-2">Nuestra Terraza</span>
-<h3 class="font-headline-md text-headline-md text-white drop-shadow-md">Ambiente al aire libre</h3>
-</div>
-</div>
-<!-- Item 2: Interior Entrance (Tall) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-4 row-span-1 md:row-span-2 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCzKuplb2nE_xOVxfQX8zwwKSoynMSCTPjMkR_Y4R5uqgrMZnbHV-chm7AivCun_zG4YD0WvhpCpNkqTZ8hP_bLYAMFE5ZShU4_SIE5sjKXUqpZ67ZJVLX8hABINmXudEzG8wTsgJrFTIWWqmHl7gtq0JbN6DQ2CmH__uoms634KcAAYeVmogmQOP5gJMaWZ61q0VbIY8wsQ16pGo9zcNWIhnyUfqITKF5xpvkfj1NF_xN9GOaWiWUfxJKolIJ8msyOvQ')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<h3 class="font-headline-sm text-headline-sm text-white drop-shadow-md">Bienvenidos</h3>
-</div>
-</div>
-<!-- Item 3: Sandwich (Square) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-4 row-span-1 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDt_Clmq5XbiNSdwt4OSpjll4Fwo5TiXtRaXtinW4xGa3UcxpE6Yzjx10c6QEGMiAZXvGeKHtxSIyk6ihQHCWOddnwcukF55rWbf6-0JGyR1Mp1p9eWPY6INpmDQu336-IWOghk1c9iH2GAky9NvCsUr7RwSS39h9NUW_tcmURO8PbG8PlIIQDo_TvgGB_MtWW6TSLzYbl0Yu_IHzOhiCo20Q4ebePupFI58iVqaRT2XTc5czYg-iBIbKhFV2QgT-uRhuw')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<h3 class="font-label-caps text-label-caps text-white">Bikini Artesano</h3>
-</div>
-</div>
-<!-- Item 4: Beers (Square) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-4 row-span-1 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4eUoax4YNf8PaCT5eCzB_QOO05VDRPW-EalgKb3IaQ-XHKzIyxAI1epzPCk1dc0Zc8HCVs_-biJ5_hXzkpuJ4t2ZWuaX6HwqUJCREnVEVp1zner6Op90wrVcWNs8ABlEC_Ntc0B-fTdHrkKrArFvaDlsHDb6IOeduQCxj4sL1k4a8A2qkks2IOovnd9rqv5OyKSbNaKHuGY4OHN_0ySQYlDgs6pPio2lmessjw0SoIIoBZeTWpy6Y_bMoQ7qOLzMZLzA')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<h3 class="font-label-caps text-label-caps text-white">Cerveza Bien Tirada</h3>
-</div>
-</div>
-<!-- Item 5: Burger & Fries (Square) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-4 row-span-1 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7NxivxwALkTFFKv5DjA67Y6JoydY9L22_7UV3oM3A8QX81x22QeEaYhxppNkCrs3ObXdcN0wprB4Sjz1ifrICaHjvXkEwXy0sRMDRHTCygte6Tl4OguprNocy-MiXv92W2fx279uonInOKZIvUeOFE8OFVN5IbHC7LSj7i6pDpWy5Ze4AzCenl4miyuUc65FzFIf6dHFyK2qtDIsPz-CrXDn_3Qrkb_2E9_bm-ZN9gNNfDxRaCnJjd7mvQMYBzY68UCE')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<h3 class="font-label-caps text-label-caps text-white">Nuestras Burgers</h3>
-</div>
-</div>
-<!-- Item 6: Gourmet Burger (Wide) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-6 row-span-1 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAElmssM99mvV98O-FVRZbupcnBYdhUaXOJcTMcqEgYfhzdVpbvIhn_2It-5Nj6z0Nk7YTbQ908THaf2_s1uPf873mDFYDRr4ZHM7xMys-2rQyJHXJHhzpp3p5LFiY6W4Gwn_wlIN_joG8c_HRWnj-K6XR7nFEvyMD3HyHisXnuDT0GXcK2WjBWnwnaNrn0zpV5OkMirugHFqOcnKYf0ahVg-HD2F75uPkyjJp_a6XF_irx1AxPRjJFL21lRFpKI3FKQJM')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<h3 class="font-headline-sm text-headline-sm text-white">Sabor Intenso</h3>
-</div>
-</div>
-<!-- Item 7: Hot Dogs (Wide) -->
-<div class="gallery-item relative overflow-hidden rounded-lg md:col-span-6 row-span-1 group shadow-sm flex items-center justify-center bg-surface">
-<div class="gallery-image-hover absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkLMM3EDcA-dcbgiUpRI4bF_KF0iZ_AONtDNuF9JuTLKub2v8xkWEdRyDPOmbzUf9oazqqF7ZF-1unCxL4PpE6b0xEIg-1Af-FbkU8XT8L-j9gKZL25HHKMSMB8zXYHlJgDugEdxeBnKL5a6uEm8FISUNkqhUPJiVi-Ypc5lu8SZJ9E7azEwyxp8R1ademMtVYxk3Y31ipQ1V1lwWDKYW0P4BnnNEA4zCFXCLVmmuFc1-_2uu2U9g8xwHBixXSdSRjxso')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-<h3 class="font-headline-sm text-headline-sm text-white">Frankfurts Especiales</h3>
-</div>
-</div></section>
-</main><footer class="w-full bg-surface-container dark:bg-on-background mt-auto transition-all duration-300"></footer>
-<!-- Footer -->
 
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<p class="text-sm text-on-surface-variant mb-2">📞 977 21 73 33</p>
+<p class="text-xs text-on-surface-variant">Carrer Mossèn Joan Batalla, 4</p>
+<p class="text-xs text-on-surface-variant">43850 Cambrils, Tarragona</p>
+</div>
+</nav>
 
-
-
-
-
-
-
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menu = document.getElementById('sidebar-menu');
+  const cartaBtn = document.querySelector('button[onclick*="carta-submenu"]');
+  const cartaSubmenu = document.getElementById('carta-submenu');
+  
+  cartaBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    cartaSubmenu.classList.toggle('open');
+  });
+  
+  document.addEventListener('click', function(event) {
+    if (!menu.contains(event.target) && !document.querySelector('#sidebar-toggle').contains(event.target)) {
+      if (menu.classList.contains('open')) {
+        // No cerrar al hacer clic
+      }
+    }
+  });
+});
+</script>
 
 </body></html>
